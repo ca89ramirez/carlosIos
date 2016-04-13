@@ -23,7 +23,6 @@ class ViewController: UIViewController {
         print("bye")
     }
     func sincrono(){
-        
         var ISB = String()
         ISB = textoISB.text!
         print(ISB)
@@ -33,14 +32,26 @@ class ViewController: UIViewController {
     //    let urls="https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:9788437604947"
         print("-------")
         let url=NSURL(string: urls)
-        let datos : NSData? =  NSData(contentsOfURL:url!)
-        let texto = NSString(data:datos!, encoding:NSUTF8StringEncoding)
         
-        print(texto!)
-        print (ISB)
-        textArea.text = texto as! String
+        let datos : NSData? =  NSData(contentsOfURL:url!)
+        
+        if datos != nil{
+            print("no nulo")
+            let texto = NSString(data:datos!, encoding:NSUTF8StringEncoding)
+            textArea.text = texto as! String
+            if texto == "{}"{
+                textArea.text = "No se encontró el ISB ingresado"
+                print("no se encontro")
+            }
+        }
+        else{
+            textArea.text = "No se cuenta con acceso a Internet"
+        }
        // 9788437604947
          }
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
