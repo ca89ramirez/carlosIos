@@ -38,15 +38,6 @@
                                     <action selector="limparCampos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q8U-ia-sCW"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eOt-7D-x9p">
-                                <rect key="frame" x="20" y="245" width="306" height="290"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="19" y="302" width="306" height="290"/>
-                                </variation>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Buscador de libros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbH-Pv-nCa">
                                 <rect key="frame" x="72" y="38" width="143" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -80,6 +71,21 @@
                                     <rect key="frame" x="12" y="183" width="344" height="21"/>
                                 </variation>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U8X-BE-J9i">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="12" y="308" width="191" height="197"/>
+                                </variation>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eOt-7D-x9p">
+                                <rect key="frame" x="20" y="245" width="306" height="290"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="226" y="270" width="147" height="290"/>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -87,6 +93,7 @@
                                 <exclude reference="PO6-hg-abq"/>
                                 <exclude reference="C6K-wd-jgc"/>
                                 <exclude reference="YZE-14-AHj"/>
+                                <exclude reference="U8X-BE-J9i"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -94,11 +101,13 @@
                                 <include reference="PO6-hg-abq"/>
                                 <include reference="C6K-wd-jgc"/>
                                 <include reference="YZE-14-AHj"/>
+                                <include reference="U8X-BE-J9i"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="autor" destination="C6K-wd-jgc" id="Qaf-qj-R4O"/>
+                        <outlet property="imagen" destination="U8X-BE-J9i" id="Bic-Mp-La8"/>
                         <outlet property="libro" destination="YZE-14-AHj" id="Yx2-Ja-JZj"/>
                         <outlet property="portada" destination="PO6-hg-abq" id="d6O-sa-GTs"/>
                         <outlet property="textArea" destination="eOt-7D-x9p" id="aF0-Fu-hrz"/>

@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var imagen: UIImageView!
     
     @IBOutlet weak var libro: UILabel!
     
@@ -95,7 +96,10 @@ class ViewController: UIViewController {
                 
             }
            
-            
+            let imageURL = NSURL(string: "http://covers.openlibrary.org/b/isbn/\(ISB)-L.jpg")!
+            let image = NSData(contentsOfURL: imageURL)!
+            imagen.image = UIImage(data: image)
+
             
            // dico4= dico3["pagination"] as! NSString as String
             
